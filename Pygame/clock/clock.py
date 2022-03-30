@@ -56,14 +56,6 @@ def polar_to_cartesian(r, theta):
     y = r * cos(pi * theta / 180)
     return x + SIZE[0] / 2, -(y - SIZE[1] / 2)
 
-
-def blitRotateCenter(surf, image, topleft, angle):
-
-    rotated_image = pygame.transform.rotate(image, angle)
-    new_rect = rotated_image.get_rect(center = image.get_rect(topleft = topleft).center)
-
-    surf.blit(rotated_image, new_rect)
-
 def blitRotate(surf, image, pos, originPos, angle):
     image_rect = image.get_rect(topleft = (pos[0]- originPos[0], pos[1] - originPos[1]))
     offset_center_to_pivot = pygame.math.Vector2(pos) - image_rect.center
