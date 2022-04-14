@@ -1,0 +1,1 @@
+{"score1": 2, "score2": 0, "mode": "easy", "player": "1", "food.x": 558, "food.y": 570}
